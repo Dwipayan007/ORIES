@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	.search{
+	    width:250px;
+		height:20px;
+		text-align:right;
+		}
+	</style>
+  </head>
+<body>
+ <div class="container" style="width:95%">
+<br>
+	<div class="row">
+		<div class="col-sm-1">
+			<img src="images/logo11.png" style="width:110px;height:90px">
+		</div>
+		<div class="col-sm-6" ><br>
+			<p style="padding-left:40px;font-weight:bold;font-size:22px">Odisa Real Estate Development Council</p>
+		</div>
+		<div class="col-sm-5" align="right">
+			<p style="font-size:12px"><span>Sitemap</span>
+				<span style="border-left:1px solid black;padding-left:9px">Faqs</span>
+				<span style="border-left:1px solid black;padding-left:9px">contact us</span>
+				<span style="border-left:1px solid black;padding-left:9px">Feed back</span>
+				<span style="border-left:1px solid black;padding-left:9px">Developers Login</span></p>
+			<p style="font-size:13px;font-weight:bold"><span>[members login]</span>
+				<span>[forum]</span>
+				<span>[from the govn desk]</span>
+				<span>[useful links]</span></p>
+			<p><input type="text" name="text" placeholder="search" class="search"></p>
+		</div>
+	</div><br>
+	<div class="w3-content w3-section" style="max-width:700px;padding-left:50px">
+  <img class="mySlides" src="images/g1.jpg" style="width:100%">
+  <img class="mySlides" src="images/g2.jpg" style="width:100%">
+  <img class="mySlides" src="images/g3.jpg" style="width:100%">
+  <img class="mySlides" src="images/g4.jpg" style="width:100%">
+	<img class="mySlides" src="images/g5.jpg" style="width:100%">
+	<img class="mySlides" src="images/g6.jpg" style="width:100%">
+	
+</div><br>
+<div>
+	<marquee bgcolor="#F8C471" style="margin-left:20px;margin-right:20px;color:red;font-size:25px">"India Is Future Ready-Housing and Infrastructures-key Catalysts"together with Real Estate Awards 2016 and Property Exhibition"</marquee>
+</div>
+</div>	
+		<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);
+}
+</script>
+
+</div>
+</body>
+</html>
+	
