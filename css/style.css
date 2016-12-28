@@ -113,9 +113,8 @@ label {
     }
 
 .navbar-brand {
-    padding: 0;
-    line-height: normal;
     height: inherit;
+    padding:0px;
 }
 
 .navbar {
@@ -123,12 +122,10 @@ label {
     margin-bottom: 0;
 }
 
-a.navbar-brand {
-    font-size: 30px;
-    color: #fff !important;
-    letter-spacing: 2px;
-    background: url('../images/logo_1.png') no-repeat 0px 0px;
-    padding: 41px 94px 0px 34px;
+a.navbar-brand img {
+    /*background: url(../images/logo_2.png) no-repeat;*/
+   
+  height:100px;
 }
 
     a.navbar-brand span {
@@ -969,7 +966,6 @@ input#amount {
 /*--//flexisel--*/
 .head_top {
     background: rgba(255, 255, 255, 0.47);
-    padding: 21px 0;
     box-shadow: 0px 0px 10px #828282;
 }
 
@@ -2332,11 +2328,11 @@ p.no-marg {
 
 @media (max-width: 736px) {
     .navbar-default .navbar-toggle .icon-bar {
-        background-color: #FFF;
+        background-color: #e88f09;
     }
 
     .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-        background: none;
+        background-color: #f2c6a6;
     }
 
     .navbar-nav {
@@ -3018,9 +3014,10 @@ p.no-marg {
     }
 
     a.navbar-brand {
-        font-size: 21px;
-        padding: 20px 0px 0px 22px;
-        background-size: 35% !important;
+       font-size: 21px;
+    margin: -38px 0px -14px -71px;
+    background-size: !important;
+    height: 100px;
     }
 
     .gal-desc h4 {
@@ -3225,28 +3222,34 @@ p.no-marg {
     background-color: #9F9F9F;
     border-radius: 25px;
 }
-.card-title{
-    border-bottom:1px solid #00aeef;
-    padding-bottom:8px;
+
+.card-title {
+    border-bottom: 1px solid #00aeef;
+    padding-bottom: 8px;
 }
-.card-border{
-    border-bottom:1px solid #808080;
+
+.card-border {
+    border-bottom: 1px solid #808080;
     list-style-type: none;
 }
- li.card-border:last-child {
+
+li.card-border:last-child {
     border-bottom: 0px;
 }
- .panel-body{
-     font-size:12px;
- }
- .card-text{
-     font-size:small;
- }
- .card-link{
-     font-size:small;
- }
 
- .carousel-indicators {
+.panel-body {
+    font-size: 12px;
+}
+
+.card-text {
+    font-size: small;
+}
+
+.card-link {
+    font-size: small;
+}
+
+.carousel-indicators {
     position: absolute;
     bottom: -36px !important;
     left: 50%;
@@ -3257,3 +3260,20 @@ p.no-marg {
     text-align: center;
     list-style: none;
 }
+
+.navbar-logo {
+    margin-top: 17px;
+    padding: 0px;
+}
+
+.header1 {
+    background: #fbfbfb;
+    padding: 8px 0;
+}
+.input-sm{
+     height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px;
+ }
