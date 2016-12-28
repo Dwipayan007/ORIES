@@ -658,7 +658,7 @@ h3.title, h2.title {
 
 /* effect-3 css end */
 .explore {
-    // background: url(../images/e2.jpg) no-repeat fixed;
+    /* background: url(../images/e2.jpg) no-repeat fixed;*/
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -679,9 +679,9 @@ h3.title, h2.title {
         background: #fff;
     }
 
-.explore-grids {
-    /*margin-top: 55px;*/
-}
+ /*.explore-grids {
+   margin-top: 55px;
+}*/
 
 .section_room select {
     color: #9F9F9F !important;
@@ -744,7 +744,7 @@ select option {
 .user-form ul li {
     list-style-type: none;
     display: inline-block;
-    float: left;
+    /*float: left;*/
     width: 30%;
     margin-left: 5%;
 }
@@ -806,9 +806,9 @@ input#amount {
         background: #000;
     }
 
-.section-top {
-    //border: 1px solid #ccc;
-}
+  /*.section-top {
+  border: 1px solid #ccc;
+}*/
 
     .section-top select {
         color: #9F9F9F !important;
@@ -3016,7 +3016,7 @@ p.no-marg {
     a.navbar-brand {
        font-size: 21px;
     margin: -38px 0px -14px -71px;
-    background-size: !important;
+   /* background-size: !important;*/
     height: 100px;
     }
 

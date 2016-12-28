@@ -66,6 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\Controllers\homeController.js" />
+    <Content Include="App\Views\home.html" />
     <Content Include="css\7.png" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
@@ -98,8 +101,18 @@
     <Content Include="images\logo_3.png" />
     <Content Include="images\team1.jpg" />
     <Content Include="index.html" />
+    <Content Include="npmPlaceholder.txt" />
     <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <None Include=".bin\node.cmd" />
     <None Include="Properties\PublishProfiles\ORES.pubxml" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,6 +134,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\Services\" />
     <Folder Include="fonts\" />
     <Folder Include="js\" />
   </ItemGroup>
@@ -155,7 +169,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Grunt.js.0.4.2.6\build\grunt.js.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grunt.js.0.4.2.6\build\grunt.js.targets'))" />
+    <Error Condition="!Exists('..\packages\Npm.js.2.13.1.0\build\npm.js.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Npm.js.2.13.1.0\build\npm.js.targets'))" />
   </Target>
+  <Import Project="..\packages\Grunt.js.0.4.2.6\build\grunt.js.targets" Condition="Exists('..\packages\Grunt.js.0.4.2.6\build\grunt.js.targets')" />
+  <Import Project="..\packages\Npm.js.2.13.1.0\build\npm.js.targets" Condition="Exists('..\packages\Npm.js.2.13.1.0\build\npm.js.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
