@@ -1,10 +1,4 @@
-﻿<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="ores">
 <head>
     <title>ORES</title>
@@ -49,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
 </head>
-<body>
+<body ng-controller="indexController">
     <div class="header1 w3ls wow bounceInUp" data-wow-duration="1s" data-wow-delay="0s">
         <div class="container">
 
@@ -63,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                     </button>
                     <h1>
-                        <a class="navbar-brand link link--yaku" href="index.html">
+                        <a class="navbar-brand link link--yaku" href="#/home">
                             <img src="images/7.png" />
                         </a>
                     </h1>
@@ -77,17 +71,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">FAQS</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Contact Us</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Feedback</a></li>
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Developer's Login</a></li>
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Member’s Login</a></li>
+                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#/devlogin">Developer's Login</a></li>
+                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#/memlogin">Member’s Login</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Forum</a></li>
                         </ul>
                         <ul class="navbar-logo">
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">From the Govt. Desk</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Useful Links</a></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="" class="btn btn-default">Live Video</a></li>
+                            <li><a href="" class="btn btn-default">Live Video</a></li>
                             <li><input type="text" placeholder="Search" class="input-sm" /> <a href="" class="btn btn-default glyphicon glyphicon-search"></a></li>
                         </ul>
-                        <ul class="navbar-logo"></ul>
                     </nav>
                 </div><!-- /navbar-collapse -->
             </nav>
@@ -181,7 +174,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-    <script src="App/app.js"></script>
+    <!--<script src="App/app.js"></script>
+    <script src="App/Controllers/indexController.js"></script>
     <script src="App/Controllers/homeController.js"></script>
+    <script src="App/Controllers/devLoginCtrl.js"></script>
+    <script src="App/Controllers/memLoginCtrl.js"></script>
+    <script src="App/Controllers/devSignupCtrl.js"></script>
+    <script src="App/Controllers/memSignupCtrl.js"></script>-->
+
+    <script src="dist/min/main.min.js"></script>
 </body>
 </html>

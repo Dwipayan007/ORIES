@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-12 col-lg-3 explore-left wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                    <div class="main">
+                    <!--<div class="main">
                         <form action="#" method="post">
                             <h4>Search By Location/Developer or Both</h4>
                             <div class="section-top">
@@ -172,6 +172,79 @@
                             <input type="submit" value="Search">
                         </form>
                         <br />
+                        <form>
+                            <div class="section-top">
+                                <h4>Search By Project Name</h4>
+                                <input type="text" class="text_box" placeholder="Project Name">
+                                <input type="submit" value="Search">
+                            </div>
+
+                        </form>
+                    </div>-->
+
+                    <div class="main">
+                        <form action="#" method="post" class="ng-pristine ng-valid">
+                            <h4>Search By Location/Developer or Both</h4>
+                            <div class="section-top">
+                                <select onchange="change_country(this.value)" class="frm-field required">
+                                    <option value="null">Location</option>
+                                    <option value="null">Property By Id</option>
+                                    <option value="null">Location</option>
+                                    <option value="AX">Type</option>
+                                    <option value="AX">Status</option>
+                                    <option value="AX">Price</option>
+                                </select>
+                            </div>
+
+                            <div class="section-top">
+
+                                <select onchange="change_country(this.value)" class="frm-field required">
+                                    <option value="null">Developer</option>
+                                    <option value="null">Single</option>
+                                    <option value="AX">Duplex</option>
+                                    <option value="AX">Retail</option>
+                                    <option value="AX">Multi Family</option>
+                                </select>
+                            </div>
+                            <div class="section-top">
+
+                                <select onchange="change_country(this.value)" class="frm-field required">
+                                    <option value="null">Property Type</option>
+                                    <option value="null">Australia</option>
+                                    <option value="AX">Sweden</option>
+                                    <option value="AX">Netherlands</option>
+                                    <option value="AX">Bangkok</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"></div>
+                            <div class="range-slider">
+                                <h4>Price range</h4>
+                                <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 6.22222%; width: 60.4444%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 6.22222%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 66.6667%;"></a></div>
+                                <script type="text/javascript" src="js/jquery-ui.js"></script>
+                                <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;">
+                                <script type="text/javascript">
+                                        //<![CDATA[
+                                        $(window).load(function () {
+                                            $("#slider-range").slider({
+                                                range: true,
+                                                min: 100000,
+                                                max: 100000000,
+                                                values: [5665399, 63689968],
+                                                slide: function (event, ui) {
+                                                    $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+                                                }
+                                            });
+                                            $("#amount").val("₹" + $("#slider-range").slider("values", 0) + " - ₹" + $("#slider-range").slider("values", 1));
+
+                                        });//]]>
+
+                                </script>
+                            </div>
+
+                            <input type="submit" value="Search">
+                        </form>
                         <form>
                             <div class="section-top">
                                 <h4>Search By Project Name</h4>

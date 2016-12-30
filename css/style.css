@@ -88,7 +88,8 @@ label {
 }
 
 .header {
-    background: #16a9ef;
+    /*background: #16a9ef;*/
+    background: #A7604E;
     padding: 8px 0;
 }
 /*-- //banner --*/
@@ -114,7 +115,7 @@ label {
 
 .navbar-brand {
     height: inherit;
-    padding:0px;
+    padding: 0px;
 }
 
 .navbar {
@@ -123,14 +124,13 @@ label {
 }
 
 a.navbar-brand img {
-    /*background: url(../images/logo_2.png) no-repeat;*/
-   
-  height:100px;
+    height: 128px;
+    margin-top: -15px;
 }
 
-    a.navbar-brand span {
-        color: #05bef6;
-    }
+a.navbar-brand span {
+    color: #05bef6;
+}
 
 .navbar-default .navbar-nav > li > a {
     font-size: 16px;
@@ -147,7 +147,7 @@ a.navbar-brand img {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #000;
+    color: #f28a08;
 }
 /*-- //header --*/
 /* Overline From Center */
@@ -667,7 +667,7 @@ h3.title, h2.title {
 }
 
 .explore-left {
-    background: #16a9ef;
+    background: #EF7F1B;
     padding: 2em;
 }
 
@@ -679,15 +679,15 @@ h3.title, h2.title {
         background: #fff;
     }
 
- /*.explore-grids {
+/*.explore-grids {
    margin-top: 55px;
 }*/
 
 .section_room select {
-    color: #9F9F9F !important;
-    font-size: 15px;
-    padding: 7px 7px;
-    outline: none;
+    color: #a44a09 !important;
+    font-size: 13px;
+    padding: 7px 0px 7px 2px;
+    /* outline: none; */
     border: none;
     background: url(../images/arrow.png) no-repeat 92% center #ffffff;
     border-radius: 0px;
@@ -781,7 +781,7 @@ input#amount {
 }
 
 .range-slider {
-    margin: 25px 0;
+    margin: 5px 0;
 }
 
 .main input[type="submit"] {
@@ -790,7 +790,7 @@ input#amount {
     margin-top: 10px;
     border: none;
     outline: none;
-    background: #98CD23;
+    background: #a44a09 !important;
     color: #fff;
     cursor: pointer;
     width: 100%;
@@ -806,33 +806,33 @@ input#amount {
         background: #000;
     }
 
-  /*.section-top {
+/*.section-top {
   border: 1px solid #ccc;
 }*/
 
-    .section-top select {
-        color: #9F9F9F !important;
-        font-size: 15px;
-        padding: 7px 7px;
-        outline: none;
-        border: none;
-        background: url(../images/arrow.png) no-repeat 96% center #ffffff;
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        -o-border-radius: 0px;
-        -webkit-appearance: none;
-        width: 100%;
-    }
+.section-top select {
+    color: #a44a09 !important;
+    font-size: 15px;
+    padding: 7px 7px;
+    outline: none;
+    border: none;
+    background: url(../images/arrow.png) no-repeat 96% center #ffffff;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-appearance: none;
+    width: 100%;
+}
 
-        .section-top select option {
-            border: 1px solid #DFDFDF;
-            outline: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
+    .section-top select option {
+        border: 1px solid #DFDFDF;
+        outline: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
 
 .main h4 {
     font-size: 15px;
@@ -991,7 +991,7 @@ input#amount {
         }
 
             .banner-right ul li a:hover {
-                color: #fff;
+                color: #ec720a;
             }
 
 .profile-left form input[type="text"], .profile-left form input[type="password"], .profile-left1 form input[type="text"], .profile-left1 form input[type="password"] {
@@ -1813,6 +1813,13 @@ p.no-marg {
 }
 
 @media (max-width: 1080px) {
+    a.navbar-brand img {
+        height: 121px;
+        margin-top: -44px;
+        margin-left: -64px;
+        margin-bottom: -28px;
+    }
+
     .profile-left form input[type="text"], .profile-left form input[type="password"] {
         margin-bottom: 22px;
         padding: 8px 10px;
@@ -2404,6 +2411,7 @@ p.no-marg {
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border: none;
         box-shadow: none;
+        margin-top: 10px;
     }
 
     .ser-first-grid h4 {
@@ -2913,6 +2921,16 @@ p.no-marg {
 }
 
 @media (max-width: 384px) {
+    a.navbar-brand img {
+           height: 114px;
+    margin-top: -9px;
+    margin-left: -4px;
+    }
+
+    ul.navbar-logo:last-child {
+        margin-top: 0px;
+    }
+
     .make h2 {
         font-size: 20px;
     }
@@ -3014,10 +3032,10 @@ p.no-marg {
     }
 
     a.navbar-brand {
-       font-size: 21px;
-    margin: -38px 0px -14px -71px;
-   /* background-size: !important;*/
-    height: 100px;
+        font-size: 21px;
+        margin: -38px 0px -14px -71px;
+        /* background-size: !important;*/
+        height: 100px;
     }
 
     .gal-desc h4 {
@@ -3034,6 +3052,14 @@ p.no-marg {
 }
 
 @media (max-width: 320px) {
+
+    a.navbar-brand img {
+        height: 114px;
+        margin-top: -8px;
+        /* margin-bottom: -40px; */
+        margin-left: -5px;
+    }
+
     .banner-right ul li i {
         margin-right: 6px;
     }
@@ -3211,7 +3237,11 @@ p.no-marg {
     margin: 10px -18px 10px -14px;
 }
 
+
 .panel-heading {
+    color: #db1111 !important;
+    background-color: rgba(240, 128, 28, 0.58) !important;
+    border-color: #16a9ef !important;
     font-size: 13px;
 }
 
@@ -3224,12 +3254,12 @@ p.no-marg {
 }
 
 .card-title {
-    border-bottom: 1px solid #00aeef;
+    border-bottom: 1px solid #ef1600;
     padding-bottom: 8px;
 }
 
 .card-border {
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid #f08a41;
     list-style-type: none;
 }
 
@@ -3270,10 +3300,15 @@ li.card-border:last-child {
     background: #fbfbfb;
     padding: 8px 0;
 }
-.input-sm{
-     height: 30px;
+
+.input-sm {
+    height: 30px;
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 0px;
- }
+}
+
+.section-top {
+    padding-top: 10px;
+}
