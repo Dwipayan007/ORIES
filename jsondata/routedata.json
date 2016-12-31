@@ -6,6 +6,11 @@
       "Controller": "homeController"
     },
     {
+      "KeyName": "about",
+      "PageUrls": "App/Views/about.html",
+      "Controller": "aboutController"
+    },
+    {
       "KeyName": "devlogin",
       "PageUrls": "App/Views/devlogin.html",
       "Controller": "devLoginCntrl"
