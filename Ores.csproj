@@ -126,6 +126,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="jsondata\routedata.json" />
     <None Include="Properties\PublishProfiles\ORES.pubxml" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />

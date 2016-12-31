@@ -1,0 +1,29 @@
+﻿{
+  "records": [
+    {
+      "KeyName": "home",
+      "PageUrls": "App/Views/home.html",
+      "Controller": "homeController"
+    },
+    {
+      "KeyName": "devlogin",
+      "PageUrls": "App/Views/devlogin.html",
+      "Controller": "devLoginCntrl"
+    },
+    {
+      "KeyName": "memlogin",
+      "PageUrls": "App/Views/memlogin.html",
+      "Controller": "memLoginCtrl"
+    },
+    {
+      "KeyName": "devsignup",
+      "PageUrls": "App/Views/devsignup.html",
+      "Controller": "devSignupCtrl"
+    },
+    {
+      "KeyName": "memsignup",
+      "PageUrls": "App/Views/memsignup.html",
+      "Controller": "memSignupCtrl"
+    }
+  ]
+}  
