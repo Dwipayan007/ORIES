@@ -42,7 +42,8 @@ ores.run(['$route', '$http', '$rootScope',
                 currentRoute = data.records[iLoop];
                 var routeName = "/" + currentRoute.KeyName;
                 $routeProviderReference.when(routeName, {
-                    templateUrl: currentRoute.PageUrls
+                    templateUrl: currentRoute.PageUrls,
+                    controller: currentRoute.Controller
                 });
             }
             $route.reload();

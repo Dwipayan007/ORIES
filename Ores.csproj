@@ -67,17 +67,37 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Controllers\aboutController.js" />
+    <Content Include="App\Controllers\circularsCntrl.js" />
     <Content Include="App\Controllers\devLoginCtrl.js" />
     <Content Include="App\Controllers\devSignupCtrl.js" />
+    <Content Include="App\Controllers\eventsCntrl.js" />
+    <Content Include="App\Controllers\faqsCntrl.js" />
     <Content Include="App\Controllers\homeController.js" />
     <Content Include="App\Controllers\indexController.js" />
+    <Content Include="App\Controllers\mediaCtrl.js" />
+    <Content Include="App\Controllers\membershipCtrl.js" />
     <Content Include="App\Controllers\memLoginCtrl.js" />
     <Content Include="App\Controllers\memSignupCtrl.js" />
+    <Content Include="App\Controllers\projectsCtrl.js" />
+    <Content Include="App\Controllers\psearchCntrl.js" />
+    <Content Include="App\Controllers\trainingCntrl.js" />
+    <Content Include="App\Controllers\ypagesCntrl.js" />
+    <Content Include="App\Views\about.html" />
+    <Content Include="App\Views\circulars.html" />
     <Content Include="App\Views\devlogin.html" />
     <Content Include="App\Views\devsignup.html" />
+    <Content Include="App\Views\events.html" />
+    <Content Include="App\Views\faqs.html" />
     <Content Include="App\Views\home.html" />
+    <Content Include="App\Views\media.html" />
+    <Content Include="App\Views\membership.html" />
     <Content Include="App\Views\memlogin.html" />
     <Content Include="App\Views\memsignup.html" />
+    <Content Include="App\Views\projects.html" />
+    <Content Include="App\Views\psearch.html" />
+    <Content Include="App\Views\training.html" />
+    <Content Include="App\Views\yellow-pages.html" />
     <Content Include="css\7.png" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />

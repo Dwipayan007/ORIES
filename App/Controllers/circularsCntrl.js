@@ -1,5 +1,5 @@
 ﻿/// <reference path="../app.js" />
-ores.controller("indexController", ["$scope", "$http", "$location","mobileCheck", function ($scope,$http, $location, mobileCheck) {
+ores.controller("circularsCntrl", ["$scope", "$http", "$location", "mobileCheck", function ($scope, $http, $location, mobileCheck) {
     if (mobileCheck) {
         angular.element(document.querySelector("#bs-example-navbar-collapse-2")).removeClass("banner-right");
         angular.element(document.querySelector("#about-tabs")).removeClass("all_pad");

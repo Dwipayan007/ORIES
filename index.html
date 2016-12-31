@@ -68,11 +68,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <nav class="cl-effect-1">
                         <ul class="navbar-logo">
                             <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="">Site Map</a></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">FAQS</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('faqs')" href="javascript:void(0)">FAQS</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Contact Us</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Feedback</a></li>
                             <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('devlogin')" href="javascript:void(0)">Developer's Login</a></li>
-                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#/memlogin">Member’s Login</a></li>
+                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('memlogin')" href="javascript:void(0)" >Member’s Login</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Forum</a></li>
                         </ul>
                         <ul class="navbar-logo">
@@ -106,14 +106,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="nav navbar-nav ">
                             <li><a class="hvr-overline-from-center active"ng-click="fnGoToPage('home')" href="javascript:void(0)">Home</a></li>
                             <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('about')" href="javascript:void(0)">About</a></li>
-                            <li><a class="hvr-overline-from-center" href="/membership">Membership</a></li>
-                            <li><a class="hvr-overline-from-center" href="/training">Training</a></li>
-                            <li><a class="hvr-overline-from-center" href="/projects">Projects</a></li>
-                            <li><a class="hvr-overline-from-center" href="/events">Events</a></li>
-                            <li><a class="hvr-overline-from-center" href="/news-updates">Media Room</a></li>
-                            <li><a class="hvr-overline-from-center" href="/directory">Directory</a></li>
-                            <li><a class="hvr-overline-from-center" href="/gnotificaion">Circulars</a></li>
-                            <li><a class="hvr-overline-from-center" href="/property">Properties</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('membership')" href="javascript:void(0)">Membership</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('training')" href="javascript:void(0)">Training</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('projects')" href="javascript:void(0)">Projects</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('events')" href="javascript:void(0)">Events</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('media')" href="javascript:void(0)">Media Room</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('yellowpages')" href="javascript:void(0)">Yellow Pages</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('circulars')" href="javascript:void(0)">Circulars</a></li>
+                            <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('psearch')" href="javascript:void(0)">Project Search</a></li>
+                            
                         </ul>
                     </nav>
                 </div><!-- /navbar-collapse -->
@@ -182,6 +183,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="App/Controllers/devSignupCtrl.js"></script>
     <script src="App/Controllers/memSignupCtrl.js"></script>
     <script src="App/Controllers/aboutController.js"></script>
+    <script src="App/Controllers/membershipCtrl.js"></script>
+    <script src="App/Controllers/circularsCntrl.js"></script>
+    <script src="App/Controllers/eventsCntrl.js"></script>
+    <script src="App/Controllers/faqsCntrl.js"></script>
+    <script src="App/Controllers/mediaCtrl.js"></script>
+    <script src="App/Controllers/projectsCtrl.js"></script>
+    <script src="App/Controllers/psearchCntrl.js"></script>
+    <script src="App/Controllers/trainingCntrl.js"></script>
+    <script src="App/Controllers/ypagesCntrl.js"></script>
     <!--<script src="dist/min/main.min.js"></script>-->
 </body>
 </html>

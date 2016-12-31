@@ -11,6 +11,51 @@
       "Controller": "aboutController"
     },
     {
+      "KeyName": "membership",
+      "PageUrls": "App/Views/membership.html",
+      "Controller": "membershipCtrl"
+    },
+    {
+      "KeyName": "training",
+      "PageUrls": "App/Views/training.html",
+      "Controller": "trainingCntrl"
+    },
+    {
+      "KeyName": "projects",
+      "PageUrls": "App/Views/projects.html",
+      "Controller": "projectsCtrl"
+    },
+    {
+      "KeyName": "events",
+      "PageUrls": "App/Views/events.html",
+      "Controller": "eventsCntrl"
+    },
+    {
+      "KeyName": "media",
+      "PageUrls": "App/Views/media.html",
+      "Controller": "mediaCtrl"
+    },
+    {
+      "KeyName": "yellowpages",
+      "PageUrls": "App/Views/yellow-pages.html",
+      "Controller": "ypagesCntrl"
+    },
+    {
+      "KeyName": "circulars",
+      "PageUrls": "App/Views/circulars.html",
+      "Controller": "circularsCntrl"
+    },
+    {
+      "KeyName": "psearch",
+      "PageUrls": "App/Views/psearch.html",
+      "Controller": "psearchCntrl"
+    },
+    {
+      "KeyName": "faqs",
+      "PageUrls": "App/Views/faqs.html",
+      "Controller": "faqsCntrl"
+    },
+    {
       "KeyName": "devlogin",
       "PageUrls": "App/Views/devlogin.html",
       "Controller": "devLoginCntrl"
