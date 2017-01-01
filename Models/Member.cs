@@ -15,5 +15,6 @@ namespace Ores.Models
         public string EMAIL { get; set; }
         public string PASSWORD { get; set; }
         public string MEMBERID { get; set; }
+        public string BUILDERNAME { get; set; }
     }
 }

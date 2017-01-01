@@ -3,8 +3,6 @@
 
 var ores = angular.module("ores", ["ngRoute", "ui.bootstrap"]);
 
-var ores = angular.module("ores", ["ngRoute"],["ui.bootstrap"]);
-
 var $routeProviderReference = null;
 var check = false;
 var _isNotMobile = (function () {

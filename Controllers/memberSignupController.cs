@@ -29,7 +29,7 @@ namespace Ores.Controllers
         public bool Post(Member member)
         {
             bool res = false;
-            return res;
+            return res= dbutility.memberSignup(member);
         }
 
         // PUT: api/memberSignup/5

@@ -1,12 +1,14 @@
 ﻿/// <reference path="../Services/memSignupService.js" />
 /// <reference path="../app.js" />
-ores.controller("memSignupCtrl", ["$scope", "memSignupService", function ($scope, memSignupService) {
+ores.controller("memSignupCtrl", ["$scope", "$location", "memSignupService", function ($scope, $location, memSignupService) {
 
     $scope.member = {};
 
     $scope.saveMember = function () {
-        memSignupService.memberSignup($scope.member).then(function () {
-
+        memSignupService.memberSignup($scope.member).then(function (res) {
+            if (res) {
+                $location.path("/memlogin");
+            }
         });
     };
 
