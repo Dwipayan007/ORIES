@@ -98,9 +98,11 @@
     <Content Include="App\Views\psearch.html" />
     <Content Include="App\Views\training.html" />
     <Content Include="App\Views\yellow-pages.html" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="css\7.png" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\form.css" />
     <Content Include="css\iconeffects.css" />
     <Content Include="css\ihover.css" />
     <Content Include="css\jquery-ui1.css" />
@@ -151,6 +153,10 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />

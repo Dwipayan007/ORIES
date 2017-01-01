@@ -1,6 +1,6 @@
 ﻿/// <reference path="F:\Typescript\Ores\Ores\Scripts/angular-route.js" />
 /// <reference path="F:\Typescript\Ores\Ores\Scripts/angular.js" />
-var ores = angular.module("ores", ["ngRoute"]);
+var ores = angular.module("ores", ["ngRoute"], ["ui.bootstrap"]);
 var $routeProviderReference = null;
 var check = false;
 var _isNotMobile = (function () {
