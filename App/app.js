@@ -1,6 +1,6 @@
 ﻿/// <reference path="F:\Typescript\Ores\Ores\Scripts/angular-route.js" />
 /// <reference path="F:\Typescript\Ores\Ores\Scripts/angular.js" />
-var ores = angular.module("ores", ["ngRoute"], ["ui.bootstrap"]);
+var ores = angular.module("ores", ["ngRoute", "ui.bootstrap"]);
 var $routeProviderReference = null;
 var check = false;
 var _isNotMobile = (function () {
@@ -8,6 +8,7 @@ var _isNotMobile = (function () {
     return !check;
 })();
 ores.constant('mobileCheck', check);
+ores.constant('baseService', 'http://localhost:6344/');
 ores.config(["$routeProvider", function ($routeProvider) {
     $routeProviderReference = $routeProvider;
     //$routeProvider.when("/home", {

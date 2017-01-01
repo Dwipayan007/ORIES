@@ -73,172 +73,186 @@
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="NAME OF THE BUILDER">
+                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm" ng-model="member.pname" placeholder="NAME OF THE BUILDER">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="OWNER NAME">
+                                    <input type="text" name="last_name" id="last_name" class="form-control input-sm" ng-model="member.ownerName" placeholder="OWNER NAME">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="website" id="website" class="form-control input-sm" placeholder="WEBSITE">
+                                    <input type="text" name="website" id="website" class="form-control input-sm" ng-model="member.website" placeholder="WEBSITE">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="address" id="address" class="form-control input-sm" placeholder="ADDRESS"></textarea>
+                                    <textarea name="address" id="address" class="form-control input-sm" ng-model="member.address" placeholder="ADDRESS"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" name="phno" id="phno" max="10" class="form-control input-sm" placeholder="CONTACT NUMBER">
+                                    <input type="number" name="phno" id="phno" max="10" class="form-control input-sm" ng-model="member.phno" placeholder="CONTACT NUMBER">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                            <input type="email" name="email" id="email" class="form-control input-sm" ng-model="member.email" placeholder="Email Address">
                         </div>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                                    <input type="password" name="password" id="password" class="form-control input-sm" ng-model="member.password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" ng-model="member.cpassword" placeholder="Confirm Password">
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
+                        <input type="submit" value="Register" class="btn btn-info btn-block" ng-click="saveMember(member)">
                     </form>
                 </div>
-                <div class="panel-heading">
-                    <h3 class="panel-title">COMPLETED PROJECTS</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
+                <!--<script type="text/ng-template" id="group-template.html">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" style="color:#fa39c3">
+                            <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                                <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                                    {{heading}}
+                                </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                        <div class="panel-body" style="text-align: right" ng-transclude></div>
+                    </div>
+                </script>
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" heading="COMPLETED PROJECTS">
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="file" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Register" class="btn btn-info btn-block">
+                            </form>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="ONGOING PROJECTS">
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="file" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Register" class="btn btn-info btn-block">
+                            </form>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="file" />
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="UPCOMING PROJECTS">
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="file" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Register" class="btn btn-info btn-block">
+                            </form>
                         </div>
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
-                    </form>
-                </div>
-                <div class="panel-heading">
-                    <h3 class="panel-title">ONGOING PROJECTS</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="file" />
-                                </div>
-                            </div>
-                        </div>
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
-                    </form>
-                </div>
-                <div class="panel-heading">
-                    <h3 class="panel-title">UPCOMING PROJECTS</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_name" id="project_name" class="form-control input-sm" placeholder="PROJECT NAME">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="location" id="location" class="form-control input-sm" placeholder="LOCATION">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="project_type" id="project_type" class="form-control input-sm" placeholder="PROJECT TYPE">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="noof_units" id="noof_units" class="form-control input-sm" placeholder="NO.OF UNITS">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="file" />
-                                </div>
-                            </div>
-                        </div>
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
-                    </form>
-                </div>
-                
+                    </div>
+
+                </uib-accordion>-->
+
             </div>
 
         </div>
