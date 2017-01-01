@@ -1,6 +1,6 @@
 ﻿/// <reference path="F:\Typescript\Ores\Ores\Scripts/angular-route.js" />
 /// <reference path="F:\Typescript\Ores\Ores\Scripts/angular.js" />
-var ores = angular.module("ores", ["ngRoute"], ["ui.bootstrap"]);
+var ores = angular.module("ores", ["ngRoute", "ui.bootstrap"]);
 var $routeProviderReference = null;
 var check = false;
 var _isNotMobile = (function () {
@@ -35,7 +35,7 @@ ores.config(["$routeProvider", function ($routeProvider) {
 ores.run(['$route', '$http', '$rootScope',
     function ($route, $http, $rootScope) {
         debugger;
-        $http.get("../jsondata/routedata.json").success(function (data) {
+        $http.get("../ORES/jsondata/routedata.json").success(function (data) {
             debugger;
             var iLoop = 0, currentRoute;
             for (iLoop = 0; iLoop < data.records.length; iLoop++) {
