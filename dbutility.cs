@@ -11,6 +11,57 @@ namespace Ores
 {
     public class dbutility
     {
+        public static bool developerSignup(Developer developer)
+        {
+            bool res = false;
+            MySqlConnection scon = new MySqlConnection(WebConfigurationManager.ConnectionStrings["MyLocalDb"].ConnectionString);
+            MySqlCommand scmd = new MySqlCommand();
+            scon.Open();
+            scmd.Connection = scon;
+            try
+            {
+                Random r = new Random();
+                int n = r.Next();
+                string memberId = n.ToString();
+                scmd.CommandText = "INSERT INTO developer_registraion(Owner_ID,Owner_Name,Website,Address,Contact_No,Builder_Name,Developer_Email)VALUES(@Owner_ID, @Owner_Name, @Website, @Address, @Contact_No, @Builder_Name,@Developer_Email)";
+                scmd.Parameters.AddWithValue("Owner_ID", memberId);
+                scmd.Parameters.AddWithValue("Owner_name", developer.OWNERNAME);
+                scmd.Parameters.AddWithValue("Website", developer.WEBSITE);
+                scmd.Parameters.AddWithValue("Builder_Name", developer.BUILDERNAME);
+                scmd.Parameters.AddWithValue("Address", developer.ADDRESS);
+                scmd.Parameters.AddWithValue("Developer_Email", developer.EMAIL);
+                scmd.Parameters.AddWithValue("Contact_No", developer.PHNO);
+                scmd.Connection = scon;
+                scmd.Prepare();
+                scmd.ExecuteNonQuery();
+                scmd.Parameters.Clear();
+                scmd.CommandText = "INSERT INTO login(uid,username, PASSWORD, usertype)VALUES(@uid,@username, @PASSWORD, @usertype)";
+
+                scmd.Parameters.AddWithValue("uid", memberId);
+                scmd.Parameters.AddWithValue("username", developer.EMAIL);
+                scmd.Parameters.AddWithValue("PASSWORD", developer.PASSWORD);
+                scmd.Parameters.AddWithValue("usertype", developer.USERTYPE);
+                scmd.Prepare();
+                scmd.ExecuteNonQuery();
+                res = true;
+            }
+            catch (Exception ee)
+            {
+                res = false;
+            }
+            finally
+            {
+                if (scmd != null)
+                    scmd.Dispose();
+                if (scon.State == ConnectionState.Open)
+                {
+                    scon.Dispose();
+                    scon.Close();
+                }
+            }
+            return res;
+        }
+
         public static bool memberSignup(Member member)
         {
             bool res = false;
@@ -23,22 +74,76 @@ namespace Ores
                 Random r = new Random();
                 int n = r.Next();
                 string memberId = n.ToString();
-                scmd.CommandText = "INSERT INTO owner_registraion(Owner_ID,Owner_Name,Website,Address,Contact_No,Builder_Name,Password)VALUES(@Owner_ID, @Owner_Name, @Website, @Address, @Contact_No, @Builder_Name,@Password)";
-                scmd.Parameters.AddWithValue("Owner_ID", memberId);
-                scmd.Parameters.AddWithValue("Owner_name", member.OWNERNAME);
-                scmd.Parameters.AddWithValue("Website", member.WEBSITE);
-                scmd.Parameters.AddWithValue("Builder_Name", member.BUILDERNAME);
-                scmd.Parameters.AddWithValue("Address", member.ADDRESS);
-                scmd.Parameters.AddWithValue("Contact_No", member.PHNO);
-                scmd.Parameters.AddWithValue("Password", member.PASSWORD);
-                scmd.Connection = scon;
+                scmd.CommandText = "INSERT INTO membership(Membership_ID,Enrollment_Type,Organisation_Name,Pan_No,Chairman_MD,Mailing_Address,Company_Telephone_No,Fax,Mobile_No,Email,Website,Repre_Name,Repre_Desig,Repre_Mobile,Repre_Email)VALUES(@Membership_ID, @Enrollment_Type, @Organisation_Name, @Pan_No, @Chairman_MD, @Mailing_Address,@Company_Telephone_No, @Fax,@Mobile_No, @Email, @Website, @Repre_Name, @Repre_Desig, @Repre_Mobile, @Repre_Email)";
+
+                scmd.Parameters.AddWithValue("Membership_ID", memberId);
+                scmd.Parameters.AddWithValue("Enrollment_Type", member.category);
+                scmd.Parameters.AddWithValue("Organisation_Name", member.organisation);
+                scmd.Parameters.AddWithValue("Pan_No", member.pan);
+                scmd.Parameters.AddWithValue("Chairman_MD", member.chairman);
+                scmd.Parameters.AddWithValue("Mailing_Address", member.address);
+                scmd.Parameters.AddWithValue("Company_Telephone_No", member.phno);
+                scmd.Parameters.AddWithValue("Fax", member.fax);
+                scmd.Parameters.AddWithValue("Mobile_No", member.mobile);
+                scmd.Parameters.AddWithValue("Email", member.email);
+
+                scmd.Parameters.AddWithValue("Website", member.website);
+                scmd.Parameters.AddWithValue("Repre_Name", member.representative);
+                scmd.Parameters.AddWithValue("Repre_Desig", member.designation);
+
+                scmd.Parameters.AddWithValue("Repre_Mobile", member.rmobile);
+                scmd.Parameters.AddWithValue("Repre_Email", member.remail);
+                scmd.Prepare();
+                scmd.ExecuteNonQuery();
+                scmd.Parameters.Clear();
+                scmd.CommandText = "INSERT INTO login(uid,username, PASSWORD, usertype)VALUES(@uid,@username, @PASSWORD, @usertype)";
+
+                scmd.Parameters.AddWithValue("uid", memberId);
+                scmd.Parameters.AddWithValue("username", member.email);
+                scmd.Parameters.AddWithValue("PASSWORD", member.password);
+                scmd.Parameters.AddWithValue("usertype", member.userType);
                 scmd.Prepare();
                 scmd.ExecuteNonQuery();
                 res = true;
+
             }
             catch (Exception ee)
             {
                 res = false;
+            }
+            finally
+            {
+                if (scmd != null)
+                    scmd.Dispose();
+                if (scon.State == ConnectionState.Open)
+                {
+                    scon.Dispose();
+                    scon.Close();
+                }
+            }
+            return res;
+        }
+
+        public static string getLoginData(Login ldata)
+        {
+            string res = "error";
+            MySqlConnection scon = new MySqlConnection(WebConfigurationManager.ConnectionStrings["MyLocalDb"].ConnectionString);
+            MySqlCommand scmd = new MySqlCommand();
+            scon.Open();
+            scmd.Connection = scon;
+            try
+            {
+                scmd.CommandText = "SELECT * FROM login WHERE username=@username AND password=@password AND usertype=@usertype";
+                scmd.Parameters.AddWithValue("username", ldata.USERNAME);
+                scmd.Parameters.AddWithValue("password", ldata.PASSWORD);
+                scmd.Parameters.AddWithValue("usertype", ldata.USERTYPE);
+                scmd.Prepare();
+                res = scmd.ExecuteScalar().ToString(); 
+
+            }
+            catch (Exception ee)
+            {
+                res = "error";
             }
             finally
             {

@@ -61,6 +61,16 @@
       "Controller": "devLoginCntrl"
     },
     {
+      "KeyName": "devprofile",
+      "PageUrls": "App/Views/devprofile.html",
+      "Controller": "devProfileCntrl"
+    },
+    {
+      "KeyName": "memprofile",
+      "PageUrls": "App/Views/memprofile.html",
+      "Controller": "memberProfileCntrl"
+    },
+    {
       "KeyName": "memlogin",
       "PageUrls": "App/Views/memlogin.html",
       "Controller": "memLoginCtrl"

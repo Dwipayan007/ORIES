@@ -1,7 +1,7 @@
 ﻿/// <reference path="F:\Typescript\Ores\Ores\Scripts/angular-route.js" />
 /// <reference path="F:\Typescript\Ores\Ores\Scripts/angular.js" />
 
-var ores = angular.module("ores", ["ngRoute", "ui.bootstrap"]);
+var ores = angular.module("ores", ["ngRoute", "LocalStorageModule", "ui.bootstrap"]);
 
 var $routeProviderReference = null;
 var check = false;
@@ -10,7 +10,8 @@ var _isNotMobile = (function () {
     return !check;
 })();
 ores.constant('mobileCheck', check);
-ores.constant('baseService', 'http://localhost:6344/');
+//ores.constant('baseService', 'http://localhost:6344/');
+ores.constant('baseService', 'http://www.ories.liveodia.co.in/');
 ores.config(["$routeProvider", function ($routeProvider) {
     $routeProviderReference = $routeProvider;
     //$routeProvider.when("/home", {
@@ -33,15 +34,27 @@ ores.config(["$routeProvider", function ($routeProvider) {
     //    controller: "memSignupCtrl",
     //    templateUrl: "App/Views/memsignup.html"
     //})
-    //.otherwise({ redirectTo: "/home" });
+    $routeProvider.otherwise({ redirectTo: "/home" });
 }]);
-ores.run(['$route', '$http', '$rootScope',
-    function ($route, $http, $rootScope) {
+ores.run(['$route', '$http', '$rootScope', '$location', 'loginService', 'localStorageService','ShareService',
+    function ($route, $http, $rootScope, $location, loginService, localStorageService,ShareService) {
         debugger;
+        loginService.fillAuthData();
+        var ut = localStorageService.get("utype");
+        $rootScope.$on('$routeChangeStart', function (event, next, current) {
+            var path = $location.path();
+            if (!loginService.authentication.isAuth && path==='/devlogin' && path==='/memlogin') {
+                if (ut === "D")
+                    $location.path('/devlogin');
+                else
+                    $location.path('/memlogin');
+            }
+        });
         $http.get("../jsondata/routedata.json").success(function (data) {
             debugger;
             var iLoop = 0, currentRoute;
             for (iLoop = 0; iLoop < data.records.length; iLoop++) {
+               
                 currentRoute = data.records[iLoop];
                 var routeName = "/" + currentRoute.KeyName;
                 $routeProviderReference.when(routeName, {

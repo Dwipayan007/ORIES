@@ -49,11 +49,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js"></script>
 </head>
 <body ng-controller="indexController">
     <div class="header1 w3ls wow bounceInUp" data-wow-duration="1s" data-wow-delay="0s">
         <div class="container">
-
             <nav class="navbar navbar-default">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header logo">
@@ -68,7 +68,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <img src="images/7.png" />
                         </a>
                     </h1>
-
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil banner-right" id="bs-example-navbar-collapse-2">
@@ -78,8 +77,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('faqs')" href="javascript:void(0)">FAQS</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Contact Us</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Feedback</a></li>
-                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('devlogin')" href="javascript:void(0)">Developer's Login</a></li>
-                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('memlogin')" href="javascript:void(0)" >Member’s Login</a></li>
+                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('devlogin')" href="javascript:void(0)">Developer's Login</a></li>
+                            <li ng-show="authentication.isAuth && authentication.userType==='D'"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i><a ng-click="logOut();" href="javascript:void(0)">Developer Logout</a></li>
+                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('memlogin')" href="javascript:void(0)" >Member’s Login</a></li>
+                            <li ng-show="authentication.isAuth && authentication.userType==='M' "><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="logOut();" href="javascript:void(0)">Member Logout</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Forum</a></li>
                         </ul>
                         <ul class="navbar-logo">
@@ -138,18 +139,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <!-- <div class="foo-arr text-center"><img src="images/arrows.png" alt=" "/></div> -->
             <div class="col-md-4 footer-left">
-                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><p>123K Avenue, 5th Street, <span>New York City</span></p>
+                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><p>N-2/95,Nayapali<span>Bhubaneswar</span><span>751015,Odisha</span></p>
             </div>
             <div class="col-md-4 footer-left">
-                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><p><a href="mailto:example@mail.com">mail@example1.com</a><span><a href="mailto:example@mail.com">mail@example2.com</a></span></p>
+                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><p><a href="sumeetsbiswal@gmail.com">sumeetsbiswal@gmail.com</a></p>
             </div>
             <div class="col-md-4 footer-left">
-                <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><p>+123 2222 222<span>+123 456 7890</span></p>
+                <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><p>+9437947419</p>
             </div>
             <div class="clearfix"></div>
             <div class="copyrights w3">
                 <div class="copy-left">
-                    <p>© 2016 Real Site. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+                    <p>© 2016 ORES. All rights reserved | Design by <a href="http://www.liveodia.co.in">ORES</a></p>
                 </div>
                 <div class="copy-right agileinfo">
                     <ul class="fb_icons">
@@ -182,7 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-    <script src="App/app.js"></script>
+    <!--<script src="App/app.js"></script>
     <script src="App/Controllers/indexController.js"></script>
     <script src="App/Controllers/homeController.js"></script>
     <script src="App/Controllers/devLoginCtrl.js"></script>
@@ -199,7 +200,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="App/Controllers/psearchCntrl.js"></script>
     <script src="App/Controllers/trainingCntrl.js"></script>
     <script src="App/Controllers/ypagesCntrl.js"></script>
+    <script src="App/Controllers/devProfileCntrl.js"></script>
+    <script src="App/Controllers/memberProfileCtrl.js"></script>
+
     <script src="App/Services/memSignupService.js"></script>
-    <!--<script src="dist/min/main.min.js"></script>-->
+    <script src="App/Services/devSignupService.js"></script>
+
+    <script src="App/Services/ShareService.js"></script>
+    <script src="App/Services/loginService.js"></script>-->
+    <script src="dist/min/main.min.js"></script>
 </body>
 </html>

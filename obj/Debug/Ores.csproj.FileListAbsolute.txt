@@ -24,6 +24,6 @@ F:\Typescript\Ores\Ores\bin\Newtonsoft.Json.xml
 F:\Typescript\Ores\Ores\bin\System.Net.Http.Formatting.xml
 F:\Typescript\Ores\Ores\bin\System.Web.Http.xml
 F:\Typescript\Ores\Ores\bin\System.Web.Http.WebHost.xml
-F:\Typescript\Ores\Ores\obj\Debug\Ores.csprojResolveAssemblyReference.cache
 F:\Typescript\Ores\Ores\obj\Debug\Ores.dll
 F:\Typescript\Ores\Ores\obj\Debug\Ores.pdb
+F:\Typescript\Ores\Ores\obj\Debug\Ores.csprojResolveAssemblyReference.cache

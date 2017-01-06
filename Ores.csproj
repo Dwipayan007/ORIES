@@ -91,12 +91,14 @@
     <Content Include="App\Controllers\aboutController.js" />
     <Content Include="App\Controllers\circularsCntrl.js" />
     <Content Include="App\Controllers\devLoginCtrl.js" />
+    <Content Include="App\Controllers\devProfileCntrl.js" />
     <Content Include="App\Controllers\devSignupCtrl.js" />
     <Content Include="App\Controllers\eventsCntrl.js" />
     <Content Include="App\Controllers\faqsCntrl.js" />
     <Content Include="App\Controllers\homeController.js" />
     <Content Include="App\Controllers\indexController.js" />
     <Content Include="App\Controllers\mediaCtrl.js" />
+    <Content Include="App\Controllers\memberProfileCtrl.js" />
     <Content Include="App\Controllers\membershipCtrl.js" />
     <Content Include="App\Controllers\memLoginCtrl.js" />
     <Content Include="App\Controllers\memSignupCtrl.js" />
@@ -104,10 +106,14 @@
     <Content Include="App\Controllers\psearchCntrl.js" />
     <Content Include="App\Controllers\trainingCntrl.js" />
     <Content Include="App\Controllers\ypagesCntrl.js" />
+    <Content Include="App\Services\devSignupService.js" />
+    <Content Include="App\Services\loginService.js" />
     <Content Include="App\Services\memSignupService.js" />
+    <Content Include="App\Services\ShareService.js" />
     <Content Include="App\Views\about.html" />
     <Content Include="App\Views\circulars.html" />
     <Content Include="App\Views\devlogin.html" />
+    <Content Include="App\Views\devprofile.html" />
     <Content Include="App\Views\devsignup.html" />
     <Content Include="App\Views\events.html" />
     <Content Include="App\Views\faqs.html" />
@@ -115,6 +121,7 @@
     <Content Include="App\Views\media.html" />
     <Content Include="App\Views\membership.html" />
     <Content Include="App\Views\memlogin.html" />
+    <Content Include="App\Views\memprofile.html" />
     <Content Include="App\Views\memsignup.html" />
     <Content Include="App\Views\projects.html" />
     <Content Include="App\Views\psearch.html" />
@@ -203,11 +210,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\devSignupController.cs" />
+    <Compile Include="Controllers\memberLoginController.cs" />
     <Compile Include="Controllers\memberSignupController.cs" />
     <Compile Include="dbutility.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Developer.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
