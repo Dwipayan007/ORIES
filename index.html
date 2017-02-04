@@ -73,19 +73,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse nav-wil banner-right" id="bs-example-navbar-collapse-2">
                     <nav class="cl-effect-1">
                         <ul class="navbar-logo">
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="">Site Map</a></li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a class="right-nav" href="">Site Map</a></li>
                             <li><a class="hvr-overline-from-center" ng-click="fnGoToPage('faqs')" href="javascript:void(0)">FAQS</a></li>
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">Contact Us</a></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Feedback</a></li>
-                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('devlogin')" href="javascript:void(0)">Developer's Login</a></li>
-                            <li ng-show="authentication.isAuth && authentication.userType==='D'"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i><a ng-click="logOut();" href="javascript:void(0)">Developer Logout</a></li>
-                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="fnGoToPage('memlogin')" href="javascript:void(0)" >Member’s Login</a></li>
-                            <li ng-show="authentication.isAuth && authentication.userType==='M' "><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a ng-click="logOut();" href="javascript:void(0)">Member Logout</a></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Forum</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a class="right-nav" href="">Contact Us</a></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a class="right-nav" href="">Feedback</a></li>
+                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a class="right-nav" ng-click="fnGoToPage('devlogin')" href="javascript:void(0)">Developer's Login</a></li>
+                            <li ng-show="authentication.isAuth && authentication.userType==='D'"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i><a class="right-nav" ng-click="logOut();" href="javascript:void(0)">Developer Logout</a></li>
+                            <li ng-show="!authentication.isAuth"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a class="right-nav" ng-click="fnGoToPage('memlogin')" href="javascript:void(0)" >Member’s Login</a></li>
+                            <li ng-show="authentication.isAuth && authentication.userType==='M' "><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a class="right-nav" ng-click="logOut();" href="javascript:void(0)">Member Logout</a></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a class="right-nav" href="">Forum</a></li>
                         </ul>
                         <ul class="navbar-logo">
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="">From the Govt. Desk</a></li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="">Useful Links</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a class="right-nav" href="">From the Govt. Desk</a></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a class="right-nav" href="">Useful Links</a></li>
                             <li><a href="" class="btn btn-default">Live Video</a></li>
                             <li><input type="text" placeholder="Search" class="input-sm" /> <a href="" class="btn btn-default glyphicon glyphicon-search"></a></li>
                         </ul>
@@ -183,7 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-    <!--<script src="App/app.js"></script>
+    <script src="App/app.js"></script>
     <script src="App/Controllers/indexController.js"></script>
     <script src="App/Controllers/homeController.js"></script>
     <script src="App/Controllers/devLoginCtrl.js"></script>
@@ -205,9 +205,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <script src="App/Services/memSignupService.js"></script>
     <script src="App/Services/devSignupService.js"></script>
-
     <script src="App/Services/ShareService.js"></script>
-    <script src="App/Services/loginService.js"></script>-->
-    <script src="dist/min/main.min.js"></script>
+    <script src="App/Services/loginService.js"></script>
+    <script src="App/Services/uploadService.js"></script>
+
+    <script src="App/Directives/imageUpload.js"></script>
+    <!--<script src="dist/min/main.min.js"></script>-->
 </body>
 </html>

@@ -10,8 +10,8 @@ var _isNotMobile = (function () {
     return !check;
 })();
 ores.constant('mobileCheck', check);
-//ores.constant('baseService', 'http://localhost:6344/');
-ores.constant('baseService', 'http://www.ories.liveodia.co.in/');
+ores.constant('baseService', 'http://localhost:6344/');
+//ores.constant('baseService', 'http://www.ories.liveodia.co.in/');
 ores.config(["$routeProvider", function ($routeProvider) {
     $routeProviderReference = $routeProvider;
     //$routeProvider.when("/home", {

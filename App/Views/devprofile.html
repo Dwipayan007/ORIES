@@ -1,10 +1,102 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-
-</body>
-</html>
+﻿<ul class="nav nav-tabs">
+    <li ng-class="{active:isSelected(1) }"><a ng-click="selectTab(1)" href>{{labels[0].l1}}</a></li>
+    <li ng-class="{active:isSelected(2)  }"><a ng-click="selectTab(2)" href>{{labels[0].l2}}</a></li>
+    <li ng-class="{active:isSelected(3)  }"><a ng-click="selectTab(3)" href>{{labels[0].l3}}</a></li>
+    <!--<li ng-class="{active:isSelected(4)  }"><a ng-click="selectTab(4)" href>ଦୁନିଆ ଖବର</a></li>-->
+</ul>
+<div ng-show="isSelected(1)">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>{{labels[0].l1}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-sm-12">
+            <div class="contact_area wow fadeInLeftBig">
+                <input class="form-control" type="text" placeholder="PROJECT NAME" ng-model="cproject.Project_Name" />
+                <input class="form-control" type="number" placeholder="LOCATION" ng-model="cproject.location" />
+                <input class="form-control" type="text" placeholder="PROJECT TYPE" ng-model="cproject.Project_Type" />
+                <input type="text" class="form-control" placeholder="NO.OF UNITS" ng-model="cproject.noofunits" />
+                <form enctype="multipart/form-data" name="form1" ng-submit="uploadProject(labels[0].l1)">
+                    <div class="col-lg-11">
+                        <input type="file" image-upload="myFile1" multiple id="file1" name="file1" />
+                    </div>
+                    <div class="col-lg-1" ng-hide="loader.loading1==true">
+                        <input type="submit" value="Add Hotnews" class="btn-sm btn-success" />
+                    </div>
+                    <div class="col-lg-1" ng-show="loader.loading1==true">
+                        <button class="btn btn-success">
+                            Uploading...
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </button>
+                    </div>
+                    <span class="success">{{mesgInews}}</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="isSelected(2)">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>{{labels[0].l2}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-sm-12">
+            <div class="contact_area wow fadeInLeftBig">
+                <input class="form-control" type="text" placeholder="PROJECT NAME" ng-model="oproject.Project_Name" />
+                <input class="form-control" type="number" placeholder="LOCATION" ng-model="oproject.location" />
+                <input class="form-control" type="text" placeholder="PROJECT TYPE" ng-model="oproject.Project_Type" />
+                <input type="text" class="form-control" placeholder="NO.OF UNITS" ng-model="oproject.noofunits" />
+                <form enctype="multipart/form-data" name="form1" ng-submit="uploadProject(labels[0].l2)">
+                    <div class="col-lg-11">
+                        <input type="file" image-upload="myFile2" id="file2" name="file2" />
+                    </div>
+                    <div class="col-lg-1" ng-hide="loader.loading2==true">
+                        <input type="submit" value="Add Hotnews" class="btn-sm btn-success" />
+                    </div>
+                    <div class="col-lg-1" ng-show="loader.loading2==true">
+                        <button class="btn btn-success">
+                            Uploading...
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </button>
+                    </div>
+                    <span class="success">{{mesgInews}}</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="isSelected(3)">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>{{labels[0].l3}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-sm-12">
+            <div class="contact_area wow fadeInLeftBig">
+                <input class="form-control" type="text" placeholder="PROJECT NAME" ng-model="uproject.Project_Name" />
+                <input class="form-control" type="number" placeholder="LOCATION" ng-model="uproject.location" />
+                <input class="form-control" type="text" placeholder="PROJECT TYPE" ng-model="uproject.Project_Type" />
+                <input type="text" class="form-control" placeholder="NO.OF UNITS" ng-model="uproject.noofunits" />
+                <form enctype="multipart/form-data" name="form1" ng-submit="uploadProject(labels[0].l3)">
+                    <div class="col-lg-11">
+                        <input type="file" image-upload="myFile3" id="file3" name="file3" />
+                    </div>
+                    <div class="col-lg-1" ng-hide="loader.loading3==true">
+                        <input type="submit" value="Add Hotnews" class="btn-sm btn-success" />
+                    </div>
+                    <div class="col-lg-1" ng-show="loader.loading3==true">
+                        <button class="btn btn-success">
+                            Uploading...
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </button>
+                    </div>
+                    <span class="success">{{mesgInews}}</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

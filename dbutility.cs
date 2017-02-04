@@ -124,6 +124,51 @@ namespace Ores
             return res;
         }
 
+        public static bool SaveData(Dictionary<string, List<string>> myData)
+        {
+            bool res = false;
+            MySqlConnection scon = new MySqlConnection(WebConfigurationManager.ConnectionStrings["MyLocalDb"].ConnectionString);
+            MySqlCommand scmd = new MySqlCommand();
+            scon.Open();
+            scmd.Connection = scon;
+            try
+            {
+                scmd.CommandText = "INSERT INTO completed_project (owner_id,project_name,location,project_type,no_of_unit)VALUES (@owner_id,@project_name,@location,@project_type,@no_of_unit)";
+                scmd.Parameters.AddWithValue("owner_id", myData[""]);
+                scmd.Parameters.AddWithValue("project_name", myData[""]);
+                scmd.Parameters.AddWithValue("location", myData[""]);
+                scmd.Parameters.AddWithValue("project_type", myData[""]);
+                scmd.Parameters.AddWithValue("no_of_unit", myData[""]);
+                scmd.Prepare();
+                scmd.ExecuteNonQuery();
+                scmd.Parameters.Clear();
+
+                scmd.CommandText = "INSERT INTO photo_info(owner_id,proect_type,project_photo) VALUES (@owner_id,@proect_type,@project_photo)";
+                scmd.Parameters.AddWithValue("owner_id", myData[""]);
+                scmd.Parameters.AddWithValue("project_type", myData[""]);
+                scmd.Parameters.AddWithValue("project_photo", myData[""]);
+                scmd.Prepare();
+                scmd.ExecuteNonQuery();
+                res = true;
+
+            }
+            catch (Exception ee)
+            {
+                res = false;
+            }
+            finally
+            {
+                if (scmd != null)
+                    scmd.Dispose();
+                if (scon.State == ConnectionState.Open)
+                {
+                    scon.Dispose();
+                    scon.Close();
+                }
+            }
+            return res;
+        }
+
         public static string getLoginData(Login ldata)
         {
             string res = "error";

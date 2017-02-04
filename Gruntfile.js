@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             },
             js: { //target
                 files: {
-                    'dist/min/main.min.js': ['App/app.js','App/Controllers/*.js','App/Services/*.js']
+                    'dist/min/main.min.js': ['App/app.js', 'App/Controllers/*.js', 'App/Services/*.js', 'App/Directives/*.js']
                 }
             }
         }
